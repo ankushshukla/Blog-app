@@ -3,9 +3,11 @@
 
     <div class="ui main text container indexpage">
         <div class="ui huge header" style="text-align: center;">Restful Blog App</div>
-        <div class="ui top attached segment" style="border-radius: 10px; background: rgba(0, 0, 0, .8);">
-            <div class="ui divided items">
-                <% blogs.forEach(function(blog){ %>
+        <% blogs.forEach(function(blog){ %>
+            <div class="ui top attached segment" style="border-radius: 10px; background: rgba(0, 0, 0, .8); height: 200px;">
+                <div class="ui divided items">
+
+
                     <div class="item">
                         <div class="image">
                             <img src="<%= blog.image %>">
@@ -24,16 +26,18 @@
                                     <%-blog.body.substring(0,100)%>...</p>
                             </div>
                             <div class="extra">
-                                <a class="ui floated basic violet button" href="/blogs/<%=blog._id%>">
+                                <a class="ui floated basic green button" href="/blogs/<%=blog._id%>">
                                     Read More
                                     <i class="right chevron icon"></i>
                                 </a>
                             </div>
                         </div>
                     </div>
-                    <% }) %>
+
+                </div>
             </div>
-        </div>
+            <% }) %>
+
     </div>
 
     <% include partials/footer %>
