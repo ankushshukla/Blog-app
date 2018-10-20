@@ -1,21 +1,22 @@
 
 <% include partials/header %>
-<div class="ui main text container segment">
-    <div class="ui huge header">New Blog</div>
+
+<div class="ui main text container segment" style="border-radius: 10px; background: rgba(0, 0, 0, .8); height: 500px;">
+    <div class="ui huge header" style="color: white">New Blog</div>
     <form class="ui form" action="/blogs" method="POST">
         <div class="field">
-            <label>Title</label>
+            <label style="color: white">Title</label>
             <input type="text" name="blog[title]" placeholder="title">
         </div>
         <div class="field">
-            <label>Image</label>
+            <label style="color: white">Image</label>
             <input type="text" name="blog[image]" placeholder="image">
         </div>
         <div class="field">
-            <label>Blog Content</label>
+            <label style="color: white">Blog Content</label>
             <textarea name="blog[body]"></textarea>
         </div>
-        <input class="ui violet big basic button" type="submit">
+        <input class="ui green big basic button" type="submit">
         
     </form>
 </div>
