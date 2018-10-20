@@ -121,34 +121,6 @@ app.delete("/blogs/:id", function(req,res){
     })
 })
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 app.listen(1234,()=> {
     console.log("The YelpCamp has Started!!!");
     
