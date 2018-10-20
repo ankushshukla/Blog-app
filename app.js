@@ -149,7 +149,7 @@ app.delete("/blogs/:id", function(req,res){
 
 
 
-app.listen(process.env.PORT,process.env.IP,function(){
+app.listen(1234,()=> {
     console.log("The YelpCamp has Started!!!");
     
 })
