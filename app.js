@@ -121,7 +121,7 @@ app.delete("/blogs/:id", function(req,res){
     })
 })
 
-app.listen(1234,()=> {
+app.listen(2222,()=> {
     console.log("The YelpCamp has Started!!!");
     
 })
