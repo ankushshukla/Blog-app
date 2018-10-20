@@ -1,35 +1,39 @@
 <% include partials/header %>
 
 
-<div class="ui main text container">
-    <div class="ui huge header">Restful Blog App</div>
-    <div class="ui top attached segment">
-        <div class="ui divided items">
-            <% blogs.forEach(function(blog){ %>
-                <div class="item">
-                    <div class="image">
-                        <img src="<%= blog.image %>"> 
-                    </div>
-                    <div class="content">
-                        <a class="header" href="/blogs/<%=blog._id%>"><%=blog.title%></a>
-                        <div class="meta">
-                            <span><%=blog.created.toDateString()%></span>
+    <div class="ui main text container indexpage">
+        <div class="ui huge header" style="text-align: center;">Restful Blog App</div>
+        <div class="ui top attached segment" style="border-radius: 10px; background: rgba(0, 0, 0, .8);">
+            <div class="ui divided items">
+                <% blogs.forEach(function(blog){ %>
+                    <div class="item">
+                        <div class="image">
+                            <img src="<%= blog.image %>">
                         </div>
-                        <div class="description">
-                            <p><%-blog.body.substring(0,100)%>...</p>   
-                        </div>
-                        <div class="extra">
-                            <a class="ui floated basic violet button" href="/blogs/<%=blog._id%>">
-                                Read More
-                                <i class="right chevron icon"></i>
+                        <div class="content">
+                            <a class="header" href="/blogs/<%=blog._id%>" style="color: white;">
+                                <%=blog.title%>
                             </a>
+                            <div class="meta" style="color: white;">
+                                <span>
+                                    <%=blog.created.toDateString()%>
+                                </span>
+                            </div>
+                            <div class="description" style="color: white;">
+                                <p>
+                                    <%-blog.body.substring(0,100)%>...</p>
+                            </div>
+                            <div class="extra">
+                                <a class="ui floated basic violet button" href="/blogs/<%=blog._id%>">
+                                    Read More
+                                    <i class="right chevron icon"></i>
+                                </a>
+                            </div>
                         </div>
                     </div>
-                </div>
-            <% }) %>
+                    <% }) %>
+            </div>
         </div>
     </div>
-</div>
 
-
-<% include partials/footer %>
+    <% include partials/footer %>
